@@ -1,0 +1,9 @@
+{
+  "settings": {
+    "label": {
+      "indicators": "特殊工作区指示器",
+      "indicator_size": "指示器尺寸",
+     "glyph": "图形"
+    }
+  }
+}

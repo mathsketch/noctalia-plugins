@@ -1,0 +1,42 @@
+id = "arux/screenshot"
+name = "screenshot"
+version = "0.1.0"
+plugin_api = 24
+author = "arux"
+license = "MIT"
+dependencies = [ "grim", "slurp" ]
+icon = "screenshot"
+description = "screenshot with grim and slurp"
+tags = []
+
+[[setting]]
+key = "save_path"
+type = "folder"
+label_key = "settings.label.save_path"
+default = "~/Pictures/Screenshot"
+
+[[widget]]
+id = "widget"
+entry = "widget.luau"
+
+[widget.actions]
+left = "panel-toggle arux/screenshot:attached"
+right = "plugin arux/screenshot:service all capture"
+
+[[panel]]
+id = "attached"
+width = 200
+height = 190
+placement = "attached"
+entry = "panel.luau"
+
+[[panel]]
+id = "floating"
+width = 200
+height = 190
+position = "center"
+entry = "panel.luau"
+
+[[service]]
+id = "service"
+entry = "service.luau"

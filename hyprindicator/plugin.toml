@@ -1,0 +1,36 @@
+id = "arux/hyprindicator"
+name = "HWIndicator"
+version = "0.1.0"
+plugin_api = 9
+author = "arux"
+license = "MIT"
+dependencies = []
+icon = "hyprland"
+description = "a indicator for dispaly special workspace in Hyprland"
+tags = []
+
+[[widget]]
+id = "widget"
+entry = "widget.luau"
+
+[[widget.setting]]
+key = "indicators"
+type = "string_map"
+label_key = "settings.label.indicators"
+default = {}
+
+[[widget.setting]]
+key = "size"
+type = "int"
+label_key = "settings.label.indicator_size"
+default = 18
+
+[[widget.setting]]
+key     = "glyph"
+type    = "glyph"
+label_key = "settings.label.glyph"
+default = ""
+
+[[service]]
+id = "service"
+entry = "service.luau"

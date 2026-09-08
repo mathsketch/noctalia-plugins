@@ -1,0 +1,9 @@
+{
+  "settings": {
+    "label": {
+      "indicators": "Special workspace indicators",
+      "indicator_size": "Indicator size",
+     "glyph": "Glyph"
+    }
+  }
+}

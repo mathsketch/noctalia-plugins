@@ -1,0 +1,5 @@
+{
+	"languageMode": "nocheck",
+	"lint": { "*": true, "UnknownGlobal": false, "FunctionUnused": false }
+}
+
