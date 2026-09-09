@@ -125,13 +125,17 @@ end
 
 --- pass seconds
 local wait = function(time, next)
-  noctalia.runAsync("sleep " .. time, next)
+  if time then
+    noctalia.runAsync("sleep " .. time, next)
+  else
+    next()
+  end
 end
 
-local function screenshot()
+local function screenshot(delay)
   local selection_way = noctalia.state.get("last_selection_way")
   local opener = OPENERS[noctalia.state.get("last_opener")]
-  wait(DELAY, function() 
+  wait(delay, function() 
     get_geometry(selection_way, function(result)  
       if result == nil or result.exitCode == 0 then
         local geom = result and result.stdout or nil
@@ -145,7 +149,7 @@ end
 
 noctalia.state.watch("execute", function(execute)
   if execute then
-    screenshot()
+    screenshot(DELAY)
     noctalia.state.set("execute", false)
   end
 end)
