@@ -1,0 +1,20 @@
+id = "arux/switcher"
+name = "switcher"
+version = "0.1.0"
+plugin_api = 24
+author = "arux"
+license = "MIT"
+dependencies = []
+icon = "server"
+description = "A util is aimed to switch bar or others"
+tags = []
+
+[[setting]]
+key = "status_map"
+type = "string_map"
+label_key = "settings.label.status_map"
+default = {}
+
+[[service]]
+id = "service"
+entry = "service.luau"
